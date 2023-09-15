@@ -199,3 +199,29 @@
 ![ls_root_in_new_container](/Homework_3/Source/ls_root_dir__in_new_container.png)
 
 #### Как видно на приведенном скриншоте, во вновь созданном контейнере данные утеряны. Отсутствует в корневой директории папка example/
+
+## Использование внешнего хранилища. 
+
+* Создадим директорию и подмонтируем ее к контейнеру:
+
+``` mkdir /test/folder ```
+
+``` docker run -it -h GB --name gb-test -v /test/folder:/otherway ubuntu:22.10 ```
+
+![mounted_dir](/Homework_3/Source/mounted_directory.png)
+
+#### Как видно из скришота в контейнер подмонтировалась директория "otherway" - копия директории "/test/folder" из  внешенго хранилища.
+####  Мы создали директорию во внешенм хранилище и подмонтировали ее в контейнер, что позволило нам сохранить данные.
+
+* Добавим данные в подмонтированную директорию:
+
+``` echo "$HOSTNAME" >> /otherway/test.txt ```
+
+``` ls -la ```
+
+![add_data](/Homework_3/Source/add_data.png)
+
+
+
+
+
