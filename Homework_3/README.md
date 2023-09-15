@@ -87,3 +87,22 @@
 
 ![docker_exec](/Homework_3/Source/starting_an_existing_container.png)
 
+* для остановки контейнера воспользуемся командой docker stop, передав в качестве аргумента имя или ID контейнера.
+
+![docker_stop](/Homework_3/Source/docker_stop.png)
+
+* для удаления контейнеров воспользуемся командой docker rm, передав в качестве аргумента имя или ID контейнера.
+
+``` docker rm 8e387eef24a9 ```
+
+![delete](/Homework_3/Source/delete.png)
+
+
+* В качестве аргументов команде docker rm, можно передать список элементов, например чтобы удалить все существующие контейнеры, можно воспользоваться следующей командой:
+
+``` docker rm $(docker ps -aq) ```
+
+![delete_all](/Homework_3/Source/delete_all_container.png)
+
+
+
