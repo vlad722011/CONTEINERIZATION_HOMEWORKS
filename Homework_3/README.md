@@ -75,7 +75,15 @@
 
 ![Ubuntu_in_docker](/Homework_3/Source/ubuntu_in_docker.png)
 
+* после выхода из консоли контейнера, он остановится, т.к. основной процесс в нашем случае оболочка bash завершит свою работу.
 
+![stop_conteiner](/Homework_3/Source/stop_ubuntu_conteiner.png)
 
+* При каждом повторном запуске команды docker run создаётся и запускается новый контейнер.
 
+![docker_run_restart](/Homework_3/Source/docker_run_restart.png)
+
+* для подключения к запущенному контейнеру можно воспользоваться командой docker exec, передав в качестве аргументов имя или ID контейнера, и команду которую мы хотим запустить, в нашем случае оболочку bash
+
+![docker_exec](/Homework_3/Source/starting_an_existing_container.png)
 
