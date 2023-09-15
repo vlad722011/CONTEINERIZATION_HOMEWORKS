@@ -104,5 +104,19 @@
 
 ![delete_all](/Homework_3/Source/delete_all_container.png)
 
+* для получения образа из репозитория docker, нужно выполнить команду docker pull, передав в качестве аргумента имя образа, например:
+
+``` docker pull linuxserver/libreoffice ```
+
+![start_libre](/Homework_3/Source/libreoffice_start.png)
+
+![done](/Homework_3/Source/libreoffce_done.png)
+
+#### Для просмотра загруженных образов можно использовать команду docker images.
+
+* для удаления образа можно использовать команду docker rmi, передав в качестве аргумента имя или ID образа
+
+![delete_images](/Homework_3/Source/delete_images.png)
+
 
 
