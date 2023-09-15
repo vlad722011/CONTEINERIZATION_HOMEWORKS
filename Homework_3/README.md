@@ -164,5 +164,38 @@
 
 ![file_passwards.txt](/Homework_3/Source/file_passwords.txt.png)
 
+* Теперь выйдем из контейнера, остановим его и затем запустим снова.
 
+``` exit ```
 
+``` docker stop gb-test ```
+
+``` docker start gb-test ```
+
+``` docker exec -it gb-test bash ```
+
+``` cat /example/passwords.txt ```
+
+![restart_test_container](/Homework_3/Source/restart_test_conteiner.png)
+
+#### Как видно на приведенном скриншоте, наши данные сохранились. Поисходит так потому что мы не пересоздавали контейнер, а запустили контейнер вновь.
+
+* Теперь удалим контейнер и создадим такой же контейнер заново, используя команды:
+
+``` exit ```
+
+``` docker stop gb-test ```
+
+``` docker rm gb-test ```
+
+``` docker run -it -h GB --name gb-test ubuntu:22.10 ```
+
+![new_container](/Homework_3/Source/new_test_container.png)
+
+* Просмотрим корневую директорию при помощи команды:
+
+``` ls / ```
+
+![ls_root_in_new_container](/Homework_3/Source/ls_root_dir__in_new_container.png)
+
+#### Как видно на приведенном скриншоте, во вновь созданном контейнере данные утеряны. Отсутствует в корневой директории папка example/
