@@ -118,5 +118,19 @@
 
 ![delete_images](/Homework_3/Source/delete_images.png)
 
+* docker rmi может принимать в качестве аргументов список ID, и для удаления всех образов можно воспользоваться следующей командой:
+
+``` docker rmi $(docker images -q) ```
+
+![delete_all_images](/Homework_3/Source/delete_all_images.png)
+
+#### Для более подробного изучения возможностей Docker - необходимо, как впрочем и обычно, воспользоваться параметром --help вместе с интересующей командой. Например:
+
+``` docker --help ```
+
+![docker_help](/Homework_3/Source/docker_help.png)
+
+## Хранение данных в контейнерах docker.
+
 
 
