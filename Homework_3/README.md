@@ -49,14 +49,33 @@
 
 ![Docker_version](/Homework_3/Source/docker_version.png)
 
-
-## Tестируем Docker.
-
 * Запускаем контейнер с использованием образа "cowsay".
 
 ``` docker run docker/whalesay cowsay Hello, Docker! ```
 
 ![Docker_cowsay](/Homework_3/Source/docker_cowsay.png)
+
+## Tестируем Docker.
+
+* Управление контейнерами и образами с помощью утилиты docker
+
+``` docker run hello-world ```
+
+![Hello_world](/Homework_3/Source/hello_world.png)
+
+#### Как видно на скриншоте, после создания и запуска контейнера, он выполнил приветствие и завершил свою работу.
+
+* теперь создадим и запустим другой контейнер и подключимся к нему:
+
+``` docker run -it ubuntu bash ```
+
+![ubuntu](/Homework_3/Source/ubuntu.png)
+
+#### После создания и запуска контейнера он не завершился, а остался работать, т.к. мы подключены к терминалу в интерактивном режиме, и можем выполнять различные команды(например ls)
+
+![Ubuntu_in_docker](/Homework_3/Source/ubuntu_in_docker.png)
+
+
 
 
 
