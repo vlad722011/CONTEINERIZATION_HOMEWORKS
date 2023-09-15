@@ -132,5 +132,37 @@
 
 ## Хранение данных в контейнерах docker.
 
+#### При создании контейнера, ему выделяется своя собственная файловая система, которая будет хранить информацию во время существования контейнера, а при его удалении будет стёрта. Для того чтобы избежать потери данных предусмотрен механизм монтирования данных внутрь файловой системы контейнера.
+
+* для демонстрации примера запустим контейнер из образа Ubuntu и войдем в него, и посмотрим содержимое корневой директории:
+
+``` docker run -it -h GB --name gb-test ubuntu:22.10 ```
+
+``` ls -l / ```
+
+![test_ubuntu_conteiner](/Homework_3/Source/test_container_ubuntu.png)
+
+* Создадим новую директорию в корне:
+
+``` mkdir /example ```
+
+* Создадим файл "passwords.txt" и добавим в него какие-либо данные:
+
+``` touch /example/passwords.txt ```
+
+``` echo "123test" >> /example/passwords.txt ```
+
+
+
+#### Таким образом мы создали директорию и файл внутри контейнера Ubuntu.
+
+![dir_example_in_root_dir](/Homework_3/Source/dir_example_in_root_dir.png)
+
+![file](/Homework_3/Source/file_passwords.txt_in_dir_example.png)
+
+* можем посмотреть содержимое файла:
+
+![file_passwards.txt](/Homework_3/Source/file_passwords.txt.png)
+
 
 
