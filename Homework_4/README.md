@@ -46,7 +46,7 @@ public class HelloWorld {
 ![file_java](/Homework_4/Sourse/java-aaplication_file.png)
 
 
-* Сохраняем измениния файла.
+* Сохраняем изменения файла.
 
 * Далее, собственно создаем подобным образом Docerfile на основе которого будет создаваться образ будущего контейнера для запуска нашего приложения.
 
@@ -71,9 +71,9 @@ CMD ["java", "HelloWorld"]
 
 ![dockerfile](/Homework_4/Sourse/dockerfile.png)
 
-* Сохраняем измениния файла.
+* Сохраняем изменения файла.
 
-* На основе созданного Dockerfile сщздаем образ контейнера:
+* На основе созданного Dockerfile создаем образ контейнера:
 
 ``` sudo docker build -t java-application . ```
 
